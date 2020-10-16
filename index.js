@@ -6,8 +6,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // ];
 
 // set up questions like activity 14 (ins_inquirer_demo)
-var inquirer = require("inquirer");
-var fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require('fs');
 
 inquirer.prompt([
     {
