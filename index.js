@@ -12,9 +12,19 @@ var fs = require('fs');
 inquirer.prompt([
     {
       type: "input",
-      name: "What is the name of your Application?",
+      name: "application name",
+      message: "What is the name of you Application"
     },
-  ]);
+    // appending the data to read me file
+  ]) .then(function(data) {
+        fs.appendFile("README.md", JSON.stringify(data)+ `\n`, function(err){
+            if(err){
+                return console.log(err);
+            }
+            console.log("Success");
+        })
+    
+  })
   
 
 // function to write README file
