@@ -15,6 +15,22 @@ inquirer.prompt([
       name: "application name",
       message: "What is the name of you Application"
     },
+    {
+        type: "input",
+        message: "Write application description here",
+        name: "description"
+    },
+    {
+        type: "input",
+        message: "How do we install your application",
+        name: "Installation"
+    },
+    {
+        type: "input",
+        message: "Instructions for use of your application. Provide Examples if needed.",
+        name: "Usage"
+    },
+
     // appending the data to read me file
   ]) .then(function(data) {
         fs.appendFile("README.md", JSON.stringify(data)+ `\n`, function(err){
